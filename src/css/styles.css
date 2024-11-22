@@ -29,7 +29,7 @@
     }
 
     .footer-container {
-        @apply text-white px-10 pt-[4.5rem] pb-3 bg-primary-gradient flex flex-col gap-8 items-center justify-center md:px-20 md:grid md:grid-cols-2 md:gap-0 md:gap-y-8 md:pt-[60px] lg:px-[300px];
+        @apply w-full flex flex-col items-center text-white bg-primary-gradient pt-[4.5rem] pb-3 px-10 gap-8 md:pt-[60px] md:px-[88px];
     }
 
     /* Button */
@@ -51,7 +51,7 @@
     }
 
     .input-container {
-        @apply w-full px-4 py-3 flex items-center gap-2 border border-border rounded transition-all duration-300;
+        @apply w-full px-4 py-3 flex items-center gap-2 border border-border rounded-lg transition-all duration-300;
     }
 
     .input-icon-label {
