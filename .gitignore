@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# Diretórios de cache
+.vscode/
+
+# PostCSS
+postcss.config.js
+
+# Arquivos de lock do npm
+package-lock.json
+
+# Tailwind config
+tailwind.config.js
