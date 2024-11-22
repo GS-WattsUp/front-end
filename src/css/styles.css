@@ -3,10 +3,150 @@
 @tailwind utilities;
 
 
-@layer utilities {
+@layer base {
+    svg {
+        @apply text-inherit fill-none size-6;
+    }
 
+    body {
+        @apply text-text font-ubuntu;
+    }
+}
+
+
+@layer utilities {
     .bg-primary-gradient {
-        @apply bg-gradient-to-tr from-primary-400 to-primary-500;
+        @apply bg-gradient-to-tr from-primary-500 to-primary-400;
+    }
+
+    /* Container */
+    .wrapper-container {
+        @apply w-screen min-h-screen flex flex-col;
+    }
+
+    .main-container {
+        @apply w-full grow flex flex-col items-center justify-center gap-6 px-5 md:gap-9 lg:gap-10 pt-2 md:pt-10 lg:pt-16 pb-6 md:pb-14 lg:pb-[4.5rem];
+    }
+
+    .footer-container {
+        @apply text-white px-10 pt-[4.5rem] pb-3 bg-primary-gradient flex flex-col gap-8 items-center justify-center md:px-20 md:grid md:grid-cols-2 md:gap-0 md:gap-y-8 md:pt-[60px] lg:px-[300px];
+    }
+
+    /* Button */
+    .primary-button {
+        @apply bg-primary-gradient w-full px-4 py-3 text-white text-base font-bold cursor-pointer rounded  transition-all duration-300;
+    }
+
+    .primary-button:hover {
+        @apply ring-2 ring-yellow-400 ring-offset-2 shadow-lg;
+    }
+
+    /* Input */
+    .field-container {
+        @apply w-full flex flex-col gap-2;
+    }
+
+    .field-label {
+        @apply text-base font-bold hover:cursor-pointer;
+    }
+
+    .input-container {
+        @apply w-full px-4 py-3 flex items-center gap-2 border border-border rounded transition-all duration-300;
+    }
+
+    .input-icon-label {
+        @apply hover:cursor-pointer;
+    }
+
+    .input-icon {
+        @apply size-6 text-icon;
+    }
+
+    .input {
+        @apply w-full p-0 bg-transparent border-none placeholder:text-placeholder focus:ring-0 focus:outline-none;
+    }
+
+    .input-un {
+        @apply relative pl-4;
+    }
+    
+    .input-un:before {
+        @apply content-[""] w-[1px] absolute left-0 -top-3 -bottom-3 bg-gray-300 transition-all duration-300;
+    }
+
+    .field-message {
+        @apply -mt-1 text-sm;
+    }
+
+    /* Hover and Focus */
+    .input-container:hover,
+    .input-container:focus-within {
+        @apply border-transparent ring-2 ring-yellow-400 ring-offset-2 shadow-lg;
+    }
+
+    .input-container:hover .input-un:before,
+    .input-container:focus-within .input-un:before {
+        @apply w-[2px] -top-4 -bottom-4 bg-primary-400;
+    }
+
+    /* Error */
+    .field-container.error .field-label {
+        @apply text-error-300;
+    }
+
+    .field-container.error .input-container {
+        @apply border-error-300 bg-error-50;
+    }
+    
+    .field-container.error .input-icon {
+        @apply text-error-300;
+    }
+
+    .field-container.error .input {
+        @apply placeholder:text-error-300;
+    }
+    
+    .field-container.error .field-message {
+        @apply text-error-300;
+    }
+
+    .field-message.error {
+        @apply text-sm text-error-300;
+    }
+
+    /* Header */
+    .header-container {
+        @apply w-full px-5 py-3;
+    }
+
+    .header-nav {
+        @apply grow flex items-center justify-between gap-2 md:mr-[155px];
+    }
+
+    .header-logo {
+        @apply w-[147px] h-auto;
+    }
+
+    .header-hamburger {
+        @apply size-7 md:hidden;
+    }
+
+    .header-nav-list {
+        @apply hidden md:flex h-full gap-3 grow items-center justify-center ;
+    }
+
+    .header-nav-list li {
+        @apply h-full;
+    }
+
+    .header-nav-list a {
+        @apply h-full
+    }
+
+    .header-nav-list a.active {
+        @apply h-full text-transparent bg-primary-gradient bg-clip-text;
+        border-bottom-width: 2px;
+        border-image: linear-gradient(to top right, #FFBC00, #FFDE00) 1;
     }
 
 }
