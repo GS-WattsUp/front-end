@@ -149,4 +149,8 @@
         border-image: linear-gradient(to top right, #FFBC00, #FFDE00) 1;
     }
 
+    .full-screen-container {
+        height: calc(100vh - 62px);
+    }
+
 }
