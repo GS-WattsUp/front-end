@@ -55,7 +55,7 @@
             </nav>
         </header>
 
-        <main class="flex flex-col gap-11">
+        <main class="flex flex-col gap-11 pb-6 md:pb-14">
             
             <section class="full-screen-container px-5 flex flex-col">
 
@@ -79,7 +79,7 @@
 
             </section>
 
-            <section class="flex flex-col px-5">
+            <section class="flex flex-col items-center px-5 pb-6 md:pb-14">
 
                 <form class="w-full md:max-w-[420px] lg:max-w-[540px] flex flex-col items-center justify-center gap-9 md:gap-10 lg:gap-11"  action="#">
                     <h2 class="font-oswald font-bold text-[32px]">Calculadora</h1>
@@ -112,15 +112,16 @@
                                         </svg>
                                     </label>
                                     
-                                    <input class="input" type="number" name="distance" id="distance" placeholder="Digite seu nome">
+                                    <input class="input" type="number" name="distance" id="distance" placeholder="Insira a distancia">
+                                    <span class="input-un">km</span>
                                 </div>
                                 <span class="field-message"></span>
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset class="w-full flex flex-col gap-7 md:gap-8 lg:gap-9">
+                    <fieldset class="w-full flex flex-col items-center gap-7 md:gap-8 lg:gap-9">
                         <h3><span class="font-oswald font-bold">Passo 2:</span> Definir Veículos</h3>
-                        <div class="w-full flex flex-col items-center justify-center gap-1">
+                        <div class="w-full flex flex-col items-center justify-center gap-9 md:gap-10 lg:gap-11">
                             <div class="w-full flex items-center justify-center">
                                 <h4 class="font-oswald font-bold text-[16px] md:text-[24px] lg:text-[28px] text-center">Veículo a Combustão</h4>
                                 <svg class="size-[24px] md:[26px] lg:size-[28px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -175,7 +176,8 @@
                                             </svg>
                                         </label>
                                         
-                                        <input class="input" type="text" name="comsuption" id="comsuption" placeholder="Digite seu nome">
+                                        <input class="input" type="text" name="comsuption" id="comsuption" placeholder="Insira o consumo">
+                                        <span class="input-un">km/L</span>
                                     </div>
                                     <span class="field-message"></span>
                                 </div>
@@ -190,14 +192,15 @@
                                             </svg>
                                         </label>
                                         
-                                        <input class="input" type="text" name="fuel-price" id="fuel-price" placeholder="Digite seu nome">
+                                        <input class="input" type="text" name="fuel-price" id="fuel-price" placeholder="Insira o preço">
+                                        <span class="input-un">R$/L</span>
                                     </div>
                                     <span class="field-message"></span>
                                 </div>
 
                             </div>
                         </div>
-                        <div class="w-full flex flex-col items-center justify-center gap-1">
+                        <div class="w-full flex flex-col items-center justify-center gap-9 md:gap-10 lg:gap-11">
                             <div class="w-full flex items-center justify-center">
                                 <h4 class="font-oswald font-bold text-[16px] md:text-[24px] lg:text-[28px] text-center">Veículo Elétrico</h4>
                                 <svg class="size-[24px] md:[26px] lg:size-[28px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -221,10 +224,69 @@
                                     <span class="field-message"></span>
                                 </div>
 
+                                <div class="field-container">
+                                    <label class="field-label" for="battery-capacity">Capacidade da Bateria</label>
+                                    <div class="input-container">
+                                        <label class="input-icon-label" for="battery-capacity">
+                                            <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.917 5H1.25m16.667 0v12.5H1.25V5m16.667 0h-3.334V2.5h3.334zM1.25 5V2.5h3.333V5zm2.5 3.75h2.5m6.667 0h2.5M5 7.5V10"/>
+                                            </svg>
+                                        </label>
+                                        
+                                        <input class="input" type="text" name="battery-capacity" id="battery-capacity" placeholder="Insira a capacidade">
+                                        <span class="input-un">kWh</span>
+                                    </div>
+                                    <span class="field-message"></span>
+                                </div>
+
+                                <div class="field-container">
+                                    <label class="field-label" for="battery-autonomy">Autonomia da Bateira</label>
+                                    <div class="input-container">
+                                        <label class="input-icon-label" for="battery-autonomy">
+                                            <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M16.375 2.5H3.625A1.125 1.125 0 0 0 2.5 3.625v12.75A1.125 1.125 0 0 0 3.625 17.5h12.75a1.125 1.125 0 0 0 1.125-1.125V3.625A1.125 1.125 0 0 0 16.375 2.5Z"/>
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 11.25-2.917 1.25M8.75 13.75 5.833 15"/>
+                                                <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M6.667 12.083q1.25-1.81 1.25-2.5a1.25 1.25 0 0 0-2.5 0q0 .69 1.25 2.5Zm6.666-2.916q1.25-1.81 1.25-2.5a1.25 1.25 0 0 0-2.5 0q0 .69 1.25 2.5Z"/>                                           
+                                            </svg>
+                                        </label>
+                                        
+                                        <input class="input" type="text" name="battery-autonomy" id="battery-autonomy" placeholder="Insira a autonomia">
+                                        <span class="input-un">km</span>
+                                    </div>
+                                    <span class="field-message"></span>
+                                </div>
+
+                                <div class="field-container">
+                                    <label class="field-label" for="energy-price">Preço da Energia</label>
+                                    <div class="input-container">
+                                        <label class="input-icon-label" for="energy-price">
+                                            <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.5 10a7.5 7.5 0 1 0 15 0 7.5 7.5 0 0 0-15 0"/>
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.333 7.5a1.67 1.67 0 0 0-1.5-.833H9.167a1.667 1.667 0 1 0 0 3.333h1.666a1.666 1.666 0 1 1 0 3.333H9.167a1.67 1.67 0 0 1-1.5-.833M10 5.833v8.334"/>                                            
+                                            </svg>
+                                        </label>
+                                        
+                                        <input class="input" type="text" name="energy-price" id="energy-price" placeholder="Insira o preço">
+                                        <span class="input-un">R$/kWh</span>
+                                    </div>
+                                    <span class="field-message"></span>
+                                </div>
+
                             </div>
                         </div>
+
+                        <button class="primary-button">Calcular</button>
                     </fieldset>
                 </form>
+                <div class="w-full flex flex-col gap-7 md:gap-8 lg:gap-9">
+                    <h3><span class="font-oswald font-bold">Passo 3:</span> Resultado</h3>
+                    <div class="w-full flex flex-col gap-8">
+                        <h4 class="font-oswald font-bold text-[16px] md:text-[24px] lg:text-[28px] text-center">Análise de Trajeto</h4>
+                        <img class="md:hidden" src="assets/exemplo-resultado.png" alt="Resultado da Análise">
+                        <img class="hidden md:block" src="assets/exemplo-resultado-desktop.png" alt="Resultado da Análise">
+                        <button class="primary-button">Fazer nova análise</button>
+                    </div>
+                </div>
  
             </section>
             
@@ -252,4 +314,3 @@
     </div>
 </body>
 </html>
- 

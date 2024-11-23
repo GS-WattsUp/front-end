@@ -71,7 +71,7 @@
     }
     
     .input-un:before {
-        @apply content-[""] w-[1px] absolute left-0 -top-3 -bottom-3 bg-gray-300 transition-all duration-300;
+        @apply content-[""] w-[1px] absolute left-0 -top-3 -bottom-3 transition-all duration-300;
     }
 
     .field-message {
